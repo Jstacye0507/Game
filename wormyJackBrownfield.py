@@ -8,7 +8,7 @@
 import random, pygame, sys
 from pygame.locals import *
 
-FPS = 10 #slows the worm down
+FPS = 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 #Crazy fast worm
 WINDOWWIDTH = 640
 WINDOWHEIGHT = 480
 CELLSIZE = 20
@@ -40,7 +40,7 @@ def main():
     FPSCLOCK = pygame.time.Clock()
     DISPLAYSURF = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT))
     BASICFONT = pygame.font.Font('freesansbold.ttf', 18)
-    pygame.display.set_caption('Wormy')
+    pygame.display.set_caption('Wormy Impossible')
 
     showStartScreen()
     while True:
@@ -48,7 +48,7 @@ def main():
         showGameOverScreen()
 
 def runGame():
-    setDifficulty() '''Runs the program that sets how fast the Worm moves'''
+    setDifficulty() #Runs the program that sets how fast the Worm moves
     score = 0
     # Set a random start point.
     startx = random.randint(5, CELLWIDTH - 6)
@@ -130,13 +130,13 @@ def drawPressKeyMsg():
 
     
 def setDifficulty(): '''Program that sets how fast the Worm will move'''
-    Difficulty = raw_input("Hard, Medium, or Easy: ")
-    if Difficulty == "Hard":
-        FPS = 20
-    if Difficulty == "Medium":
-        FPS = 15
-    if Difficulty == 'Easy':
-        FPS = 10
+Difficulty = raw_input("Hard, Medium, or Easy: ")
+if Difficulty == "Hard":
+    FPS = 20
+if Difficulty == "Medium":
+    FPS = 15
+if Difficulty == 'Easy':
+    FPS = 10
 
 
 
@@ -157,8 +157,8 @@ def checkForKeyPress():
     
 def showStartScreen():
     titleFont = pygame.font.Font('freesansbold.ttf', 100)
-    titleSurf1 = titleFont.render('Wormy!', True, WHITE, DARKGREEN)
-    titleSurf2 = titleFont.render('Wormy!', True, GREEN)
+    titleSurf1 = titleFont.render('Wormy-Instant Death!', True, WHITE, DARKGREEN)
+    titleSurf2 = titleFont.render('Wormy-Instant Death!', True, GREEN)
 
     degrees1 = 0
     degrees2 = 0
@@ -278,6 +278,9 @@ def drawGrid():
         pygame.draw.line(DISPLAYSURF, DARKGRAY, (x, 0), (x, WINDOWHEIGHT))
     for y in range(0, WINDOWHEIGHT, CELLSIZE): # draw horizontal lines
         pygame.draw.line(DISPLAYSURF, DARKGRAY, (0, y), (WINDOWWIDTH, y))
+
+
+    
 
 
 
